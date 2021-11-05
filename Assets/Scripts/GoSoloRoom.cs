@@ -10,11 +10,12 @@ public class GoSoloRoom : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
-        playerPosition = (this.CompareTag("EnterTherapyRoom")) ? new Vector3(1.75f, 2f, 1.75f) : new Vector3(0, 0, 0);
+        playerPosition = (this.CompareTag("EnterTherapyRoom")) ? new Vector3(1.75f, 2f, 1.75f) : new Vector3(4.8f, 1.1f, 9.75f);
 
         //transition.SetActive(true);
         //thePlayer.SetActive(false);
+        Debug.Log("variable is " + playerPosition);
+        Debug.Log("actual player position atm is " + thePlayer.transform.position);
         StartCoroutine(FinishFade());
     }
 
@@ -26,6 +27,7 @@ public class GoSoloRoom : MonoBehaviour
         fadeManager.Fade(false, 2f);
         thePlayer.transform.position = playerPosition;
         playerPosition = new Vector3(0, 0, 0);
+        Debug.Log(playerPosition);
 
         //transition.SetActive(false);
     }
