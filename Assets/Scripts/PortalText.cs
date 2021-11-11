@@ -6,15 +6,20 @@ using TMPro;
 
 public class PortalText : MonoBehaviour
 {
-    public TMP_Text textUse;
+    //public TMP_Text textUse;
    // [SerializeField] private Text textUse;
     //[SerializeField] private Image textUse;
     [SerializeField] private GameObject portalPlace;
+    public GameObject textUse;
     private Vector3 offset;
     private Vector3 locationNow;
     private Vector3 screenPosition;
+    public float speed;
 
     // Start is called before the first frame update
+    /// <summary>
+    ///  USE ONLY IF THE TEXT IS a TEXTMESH OBJECT,,,,NOT a GAME OBJECT!!!
+    /// </summary>
     void Start()
     {
         ///    Debug.Log(textUse.text);
@@ -26,8 +31,8 @@ public class PortalText : MonoBehaviour
     void enableDisplay(bool on) {
         if (on) {
             textUse.gameObject.SetActive(true);
-           // locationNow = screenPosition + offset;
-            textUse.transform.position = screenPosition + offset;
+            // locationNow = screenPosition + offset;
+            // textUse.transform.position = screenPosition;
         } else
         {
             textUse.gameObject.SetActive(false);
@@ -47,6 +52,11 @@ public class PortalText : MonoBehaviour
         else
         {
             enableDisplay(true);
+            //float y = mathf.pingpong(time.time * speed, 1) * 6 - 3;
+            //vector3 pos = textuse.transform.position;
+            //pos.y = y;
         }
+
+        
     }
 }
