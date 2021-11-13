@@ -1675,19 +1675,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86426844}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &86801465
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311640748}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.1876006, y: 2.2702014, z: 3.0647984}
-  m_Center: {x: -0.04130578, y: 0.8088907, z: 0.41552258}
 --- !u!136 &86801466
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -20193,8 +20180,8 @@ GameObject:
   - component: {fileID: 1311346828}
   - component: {fileID: 1321172846}
   - component: {fileID: 86801466}
-  - component: {fileID: 86801465}
   - component: {fileID: 1311640749}
+  - component: {fileID: 1311640751}
   m_Layer: 0
   m_Name: Bear_LOD0
   m_TagString: Untagged
@@ -20215,6 +20202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1773622078225230}
+  eyes: {fileID: 574943914}
+  snore: {fileID: 2138712348}
 --- !u!1 &1311640750
 GameObject:
   m_ObjectHideFlags: 0
@@ -20232,6 +20221,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1311640751
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311640748}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.062656, y: 2.819302, z: 4.61796}
+  m_Center: {x: -0.09329176, y: 0.90965176, z: -0.10838795}
 --- !u!1 &1311640760
 GameObject:
   m_ObjectHideFlags: 0
@@ -20552,7 +20554,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 0a58ccbcdc613824980f92e923e79f61, type: 3}
   m_Controller: {fileID: 9100000, guid: 26c9301bef2153a488b36beb6889d9fe, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
