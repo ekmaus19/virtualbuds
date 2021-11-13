@@ -26,8 +26,6 @@ public class FriendWait : NPCBaseFSM
         NPC.transform.position = npcPos;
         NPC.transform.LookAt(opponent.transform);
         anim.SetFloat("friendWaitTime",anim.GetCurrentAnimatorStateInfo(layerIndex).normalizedTime);
-        Debug.Log(anim.GetCurrentAnimatorStateInfo(layerIndex).normalizedTime);
-
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
@@ -36,15 +34,4 @@ public class FriendWait : NPCBaseFSM
         
     }
 
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
-
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
 }

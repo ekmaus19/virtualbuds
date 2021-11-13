@@ -26,7 +26,6 @@ public class BearAI : MonoBehaviour
     {
         // if animation NOT sleep, turn off eyes turn off particle effect
         currAnim = anim.GetCurrentAnimatorClipInfo(0);
-        Debug.Log(currAnim[0].clip.name);
         if (!((currAnim[0].clip.name).ToString() == "Bounce"))
         {
             eyes.SetActive(false);
