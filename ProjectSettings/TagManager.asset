@@ -7,6 +7,7 @@ TagManager:
   - EntryDoor
   - EnterWaitingRoom
   - EnterTherapyRoom
+  - waypoint
   layers:
   - Default
   - TransparentFX

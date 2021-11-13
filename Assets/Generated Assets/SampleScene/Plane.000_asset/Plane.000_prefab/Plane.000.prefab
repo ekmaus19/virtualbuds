@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8601288113250046892
+--- !u!1 &6090080387630848431
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,60 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2048702708416792099}
-  - component: {fileID: 6420459298540353355}
-  - component: {fileID: 7456375925850553844}
-  - component: {fileID: 3366736822322809224}
+  - component: {fileID: 9000688525285051748}
+  - component: {fileID: 6737575544377181564}
+  - component: {fileID: 1427889753486457561}
+  - component: {fileID: 452795351457111721}
+  - component: {fileID: -1835938978553394527}
   m_Layer: 0
-  m_Name: Couch_3
+  m_Name: Plane.000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &2048702708416792099
+--- !u!4 &9000688525285051748
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8601288113250046892}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 6090080387630848431}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 15.480142, y: 0.06728528, z: 34.571392}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 100, y: 99.999985, z: 99.999985}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6420459298540353355
+--- !u!114 &6737575544377181564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090080387630848431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 546024180, guid: c1a5a20ba2176bc4386c260788624443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabProjectPath: Assets/Generated Assets/SampleScene/Plane.000_asset/Plane.000.prefab
+--- !u!33 &1427889753486457561
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8601288113250046892}
-  m_Mesh: {fileID: 4300000, guid: 74d96ca771fb1e44b9b9003ed5937b21, type: 2}
---- !u!23 &7456375925850553844
+  m_GameObject: {fileID: 6090080387630848431}
+  m_Mesh: {fileID: 4300000, guid: 951c188ef5dbf324597863a1cc80528f, type: 2}
+--- !u!23 &452795351457111721
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8601288113250046892}
+  m_GameObject: {fileID: 6090080387630848431}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -60,7 +74,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1d2b038182884824dbc8e73a1720ca0c, type: 2}
+  - {fileID: 2100000, guid: 8faded31a82bc7a49ba22edbaacb2d6a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,16 +96,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3366736822322809224
+--- !u!114 &-1835938978553394527
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8601288113250046892}
+  m_GameObject: {fileID: 6090080387630848431}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 546024180, guid: c1a5a20ba2176bc4386c260788624443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabProjectPath: Assets/Imported Assets/Toon Furniture/Models/Couch_3_fbx/Couch_3.prefab
+  prefabProjectPath: Assets/Generated Assets/SampleScene/Plane.000_asset/Plane.000_prefab/Plane.000.prefab
