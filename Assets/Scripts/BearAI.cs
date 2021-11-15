@@ -8,16 +8,25 @@ public class BearAI : MonoBehaviour
     public GameObject player;
     public GameObject eyes;
     public GameObject snore;
+    private Vector3 npcPos;
+    private Quaternion npcRot;
     public AnimatorClipInfo[] currAnim;
 
     public GameObject GetPlayer()
     {
         return player;
     }
+    private void getNPCPos()
+    {
+        npcPos = transform.position;
+        npcRot = transform.localRotation;
+
+    }
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        getNPCPos();
     }
 
 
@@ -35,6 +44,17 @@ public class BearAI : MonoBehaviour
         else {
             eyes.SetActive(true);
             snore.SetActive(true);
+        }
+
+        // if state has tag "still" freeze npc position - for glancing around 
+        if (anim.CompareTag("still"))
+        {
+            // check if current NPC position had been captured
+            if (transform.position != npcPos)
+            {
+                getNPCPos();
+            }
+            transform.position = npcPos;
         }
 
         // update distance from player and bear
