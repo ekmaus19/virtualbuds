@@ -47,7 +47,7 @@ public class BearAI : MonoBehaviour
         }
 
         // if state has tag "still" freeze npc position - for glancing around 
-        if (anim.CompareTag("still"))
+        if (anim.tag.ToString() == "still")
         {
             // check if current NPC position had been captured
             if (transform.position != npcPos)

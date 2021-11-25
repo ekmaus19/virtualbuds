@@ -8,7 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SpaceRoom.unity
     guid: 981494bc3c3d72f429184dec5d3d7edb
-  m_configObjects: {}
+  - enabled: 0
+    path: Assets/Oculus/SampleFramework/Usage/DistanceGrab.unity
+    guid: 24f58b3f0ca02d44eaec7f50bca538f2
+  - enabled: 0
+    path: Assets/Oculus/VR/Scenes/ControllerModels.unity
+    guid: 39cfe7aa0a2d46c47994d8d0308ec663
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8b2368ea83280b04e978ed33c1652591, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: db84ca58f4d70034db0aefd702c6c0a9, type: 2}
