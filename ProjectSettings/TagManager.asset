@@ -8,6 +8,7 @@ TagManager:
   - EnterWaitingRoom
   - EnterTherapyRoom
   - waypoint
+  - apple
   layers:
   - Default
   - TransparentFX

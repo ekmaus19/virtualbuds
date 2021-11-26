@@ -10,7 +10,7 @@ public class GoSoloRoom : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        playerPosition = (this.CompareTag("EnterTherapyRoom")) ? new Vector3(1.75f, 2f, 1.75f) : new Vector3(4.8f, 1.1f, 9.75f);
+        playerPosition = (this.CompareTag("EnterTherapyRoom")) ? new Vector3(6.06f, 1.44f, 14) : new Vector3(9.88f,.73f,-9.54f);
 
         //transition.SetActive(true);
         //thePlayer.SetActive(false);
@@ -26,9 +26,7 @@ public class GoSoloRoom : MonoBehaviour
         //GetComponent<Collider>().enabled = false;
         fadeManager.Fade(false, 2f);
         thePlayer.transform.position = playerPosition;
-        playerPosition = new Vector3(0, 0, 0);
-        Debug.Log(playerPosition);
-
+        //playerPosition = new Vector3(0, 0, 0);
         //transition.SetActive(false);
     }
 
