@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Chase : NPCBaseFSM
 {
+    private Vector3 direction;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -13,7 +14,10 @@ public class Chase : NPCBaseFSM
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        var direction = opponent.transform.position - NPC.transform.position;
+        direction.x = opponent.transform.position.x - NPC.transform.position.x;
+        direction.z = opponent.transform.position.z - NPC.transform.position.z;
+        //direction.y = 0.276f;
+        direction.y = 0f;
         //NPC.transform.LookAt(opponent);
         NPC.transform.rotation = Quaternion.Slerp(NPC.transform.rotation,
             Quaternion.LookRotation(direction),

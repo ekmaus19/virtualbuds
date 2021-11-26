@@ -12,7 +12,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -1806418335480976005}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 787950628158491622}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -423,22 +424,22 @@ AnimatorStateMachine:
     m_Position: {x: 410, y: -120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1530851446960952238}
-    m_Position: {x: 190, y: 280, z: 0}
+    m_Position: {x: 120, y: 280, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -560500570364946514}
     m_Position: {x: 420, y: 480, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -678826025387314766}
-    m_Position: {x: 380, y: -260, z: 0}
+    m_Position: {x: 410, y: -250, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2103358497777195388}
-    m_Position: {x: 690, y: 270, z: 0}
+    m_Position: {x: 760, y: 270, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 894151657398704406}
-    m_Position: {x: 140, y: 10, z: 0}
+    m_Position: {x: 150, y: -40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -9168677662549574627}
-    m_Position: {x: 140, y: 60, z: 0}
+    m_Position: {x: 140, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 925000578710362533}
     m_Position: {x: 140, y: 110, z: 0}
@@ -546,8 +547,8 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: Base Layer
-    m_StateMachine: {fileID: 1107161511660163916}
+    m_Name: Feed
+    m_StateMachine: {fileID: 3278646464746743078}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -558,8 +559,8 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: Sleep
-    m_StateMachine: {fileID: 3278646464746743078}
+    m_Name: Base Layer
+    m_StateMachine: {fileID: 1107161511660163916}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -591,6 +592,23 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &787950628158491622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 100c2cc2823713c48b9a43c2d5755fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
+  opponent: {fileID: 0}
+  speed: 2
+  rotSpeed: 3
+  accuracy: 3
 --- !u!1102 &894151657398704406
 AnimatorState:
   serializedVersion: 6
@@ -631,7 +649,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7694907751379005497}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 9178728098285370233}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1424,7 +1443,7 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OrigTestLayer
+  m_Name: Feed
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 7172239627474135773}
@@ -1435,7 +1454,7 @@ AnimatorStateMachine:
   - {fileID: 8277697808464825371}
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_AnyStatePosition: {x: 0, y: 50, z: 0}
   m_EntryPosition: {x: 20, y: 160, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
@@ -1564,7 +1583,7 @@ MonoBehaviour:
   opponent: {fileID: 0}
   speed: 2
   rotSpeed: 10
-  accuracy: 3
+  accuracy: 0
 --- !u!114 &5785106921577298988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1644,10 +1663,30 @@ AnimatorTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 3
+    m_ConditionEvent: Blend
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7172239627474135773}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 1
+--- !u!114 &9178728098285370233
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 100c2cc2823713c48b9a43c2d5755fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
+  opponent: {fileID: 0}
+  speed: 2
+  rotSpeed: 3
+  accuracy: 3

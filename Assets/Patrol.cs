@@ -37,6 +37,7 @@ public class Patrol : NPCBaseFSM
         }
         //rotate towards target
         var direction = waypoints[currentWP].transform.position - NPC.transform.position;
+        direction.y = 0f;
         NPC.transform.rotation = Quaternion.Slerp(NPC.transform.rotation, 
             Quaternion.LookRotation(direction),
             rotSpeed * Time.deltaTime);

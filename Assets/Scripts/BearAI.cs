@@ -47,15 +47,15 @@ public class BearAI : MonoBehaviour
         }
 
         // if state has tag "still" freeze npc position - for glancing around 
-        if (anim.tag.ToString() == "still")
-        {
-            // check if current NPC position had been captured
-            if (transform.position != npcPos)
-            {
-                getNPCPos();
-            }
-            transform.position = npcPos;
-        }
+        //if (anim.tag.tostring() == "still")
+        //{
+        //    // check if current npc position had been captured
+        //    if (transform.position != npcpos)
+        //    {
+        //        getnpcpos();
+        //    }
+        //    transform.position = npcpos;
+        //}
 
         // update distance from player and bear
         anim.SetFloat("distance", Vector3.Distance(transform.position, player.transform.position));

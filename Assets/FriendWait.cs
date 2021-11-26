@@ -23,6 +23,8 @@ public class FriendWait : NPCBaseFSM
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        //npcPos.y = 0.276f;
+        npcPos.y = 0f;
         NPC.transform.position = npcPos;
         NPC.transform.LookAt(opponent.transform);
         anim.SetFloat("friendWaitTime",anim.GetCurrentAnimatorStateInfo(layerIndex).normalizedTime);
