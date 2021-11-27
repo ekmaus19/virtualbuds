@@ -9,8 +9,14 @@ public class GoToRoomVR : OVRScreenFade
 
     private void OnTriggerEnter(Collider other)
     {
-        playerPosition = (this.CompareTag("EnterTherapyRoom")) ? new Vector3(9.88f, 3f, -9.54f) : thePlayer.transform.position;
-        playerPosition = (this.CompareTag("EnterWaitingRoom")) ? new Vector3(6.06f, 3f, 14) : thePlayer.transform.position;
+        if (this.CompareTag("EnterTherapyRoom")) {
+            playerPosition = new Vector3(10.81f, 3f, -12f);
+        } else if (this.CompareTag("EnterWaitingRoom")){
+            playerPosition = new Vector3(10.81f, 3.0f, 14.0f);
+        } else
+        {
+            return;
+        }
         FadeOut();
         thePlayer.transform.position = playerPosition;
         FadeIn();

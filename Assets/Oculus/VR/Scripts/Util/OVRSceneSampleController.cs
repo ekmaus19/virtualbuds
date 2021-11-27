@@ -26,7 +26,7 @@ public class OVRSceneSampleController : MonoBehaviour
     /// <summary>
     /// An optional texture that appears before the menu fades in.
     /// </summary>
-   //public Texture fadeInTexture = null;
+    public Texture fadeInTexture = null;
 
     /// <summary>
     /// Controls how quickly the player's speed and rotation change based on input.
